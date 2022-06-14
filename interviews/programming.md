@@ -3,7 +3,6 @@
 Факториал
 
 public class HelloWorld{
-
     public static void main(String []args){
     
         int[] array1 = {1,2,4,5};
