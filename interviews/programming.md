@@ -23,6 +23,8 @@
 ### Массивы
 
 #### Даны три неубывающих массива чисел. Найти число, которое присутствует во всех трех массивах.
+<details>
+<summary>Решение</summary>
 
     public class HelloWorld{
 
@@ -49,8 +51,12 @@
           }
         }
 
+</details>
+                                                 
 #### Дан массив строк. Найти самое длинное слово в нем.
-
+<details>
+<summary>Решение</summary>
+    
     public class Main {
 
         public static String findLongestWord(String[] array) {
@@ -80,6 +86,7 @@
       }
     }
 
+</details>    
 ## ООП
 
 ### Стэк
