@@ -51,6 +51,35 @@
 
 #### Дан массив строк. Найти самое длинное слово в нем.
 
+    public class Main {
+
+        public static String findLongestWord(String[] array) {
+
+          int max = 0;
+          int index = 0;
+
+          for(int i = 0; i < array.length; i++) {
+            if(array[i].length() > max) {
+              index = i;
+              max = array[i].length();
+            }
+          }
+
+          return array[index];
+
+        }
+
+        public static void main(String[] args) {
+
+          String[] array1 = {"Test", "Anton", "Chicago", "Low"};
+          String[] array2 = {"", "", "", ""};
+
+          System.out.println(findLongestWord(array1));
+          System.out.println(findLongestWord(array2));
+
+      }
+    }
+
 ## ООП
 
 ### Стэк
