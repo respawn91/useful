@@ -19,6 +19,52 @@
 #### Определить, являются ли две строки анаграммами друг другу
 
 #### Проверить, являются ли два слова (строки) анаграммами друг другу
+<details>
+<summary>Решение</summary>
+    
+public class Main {
+    
+    public static boolean isAnagram(String s1, String s2) {
+      
+      boolean result = false;
+      
+      s1 = (s1.toLowerCase()).trim();
+      char[] s1Array = s1.toCharArray();
+      
+      s2 = (s2.toLowerCase()).trim();
+      char[] s2Array = s2.toCharArray();
+      
+      if(s1Array.length != s2Array.length) {
+        result = false;
+      }
+      else {
+        Arrays.sort(s1Array);
+        Arrays.sort(s2Array);
+        
+        if(Arrays.equals(s1Array, s2Array) == true)
+          result = true;
+        else
+          result = false;
+        }
+      return result;
+    }
+    
+    public static void main(String[] args) {
+      
+      String s1 = "anton";
+      String s2 = "noant";
+      String s3 = "antan";
+      String s4 = "ANTON";
+      String s5 = "antony";
+      
+      System.out.println(isAnagram(s1, s2));  //  true
+      System.out.println(isAnagram(s1, s3));  //  false
+      System.out.println(isAnagram(s1, s4));  //  true
+      System.out.println(isAnagram(s1, s5));  //  false
+  }
+}
+
+</details> 
 
 ### Массивы
 
