@@ -16,7 +16,58 @@
 
 ### Работа со строками
 
-#### Определить, являются ли две строки анаграммами друг другу
+#### Определить, являются ли две строки палиндромами друг другу
+<details>
+<summary>Решение</summary>
+    
+public class Main {
+    
+    public static boolean isPalindrome(String s1, String s2) {
+      
+      boolean result = true;
+      
+      s1 = (s1.toLowerCase()).trim();
+      char[] s1Array = s1.toCharArray();
+      
+      s2 = (s2.toLowerCase()).trim();
+      char[] s2Array = s2.toCharArray();
+      
+      if(s1Array.length != s2Array.length) {
+        result = false;
+      }
+      else {
+        
+        int l = s1Array.length;
+        
+        for(int i = 0; i < l; i++) {
+          if(s1Array[i] != s2Array[l-i-1]) {
+            result = false;
+          }
+        }
+        }
+      return result;
+    }
+    
+    public static void main(String[] args) {
+      
+      String s1 = "anton";
+      String s2 = "notna";
+      String s3 = "antan";
+      
+      System.out.println(isPalindrome(s1, s2));  //  true
+      System.out.println(isPalindrome(s1, s3));  //  false      
+      
+      String s4 = "potato";
+      String s5 = "otatop";
+      String s6 = "ototop";
+      
+      System.out.println(isPalindrome(s4, s5));  //  true
+      System.out.println(isPalindrome(s4, s6));  //  false
+  }
+}
+
+</details> 
+
 
 #### Проверить, являются ли два слова (строки) анаграммами друг другу
 <details>
